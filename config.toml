@@ -1,0 +1,27 @@
+baseURL = "https://magishift.com/"
+languageCode = "en-us"
+title = "Magishift"
+theme = "serif"
+
+[params]
+#google_analytics_id=""
+
+[[menu.main]]
+    name = "Community"
+    url = "/community/"
+    weight = 1
+
+[[menu.main]]
+	name = "Enterprise"
+	url = "/enterprise/"
+    weight = 2
+
+[[menu.main]]
+	name = "Documentations"
+	url = "/documentations/"
+	weight = 3
+
+[[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 4

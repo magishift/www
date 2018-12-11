@@ -1,0 +1,73 @@
+{{ define "title" }}{{ end }} {{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-home{{ end }}
+{{ define "header_classes" }}header-transparent{{ end }}
+
+{{ define "main" }}
+
+<div class="intro pb-4">
+  <div class="container">{{ .Content }}</div>
+</div>
+
+<div class="container pt-2">
+  <div class="call">
+    <div class="call-box-top">
+      <div class="call-phone">
+        <strong>Phone: </strong> {{ .Site.Data.contact.phone }}
+      </div>
+      <div class="call-email">
+        <strong>Email: </strong>
+        <a href="mailto:{{ .Site.Data.contact.email }}">
+          {{ .Site.Data.contact.email }}
+        </a>
+      </div>
+    </div>
+    <div class="call-box-bottom">
+      <a href="/contact" class="button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<div class="container pt-5 pb-4 pt-md-7 pb-md-4">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <h2 class="title-3 text-dark mb-4">Framework Features</h2>
+    </div>
+    {{ range.Site.Data.features }}
+    <div class="col-12 col-md-6 col-lg-4 mb-2">
+      <div class="feature">
+        {{ if .image }}
+        <div class="feature-image">
+          <img alt="{{ .title }} logo" src="{{ .image }}" />
+        </div>
+        {{ end }}
+        <h2 class="feature-title">{{ .title }}</h2>
+        <div class="feature-content">{{ .description }}</div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+{{ $enterprise := where (where .Site.RegularPages "Type" "enterprise") ".Params.featured" true }}
+{{if gt (len $enterprise) 0}}
+<div class="container pt-4 pt-md-2">
+  <div class="row justify-content-start">
+    <div class="col-12">
+      <h2 class="title-3 text-dark mb-3">For enterprises</h2>
+    </div>
+    {{ $enterprise := where (where .Site.RegularPages "Type" "enterprise") ".Params.featured" true }}
+    {{ range first 6 (sort $enterprise ".Params.weight") }}
+    <div class="col-12 col-md-4 mb-1">{{ .Render "summary" }}</div>
+    {{ end }}
+    <div class="col-12 text-center">
+      <a class="button button-primary" href="/enterprise"
+        >View All Enterprise Services</a
+      >
+    </div>
+  </div>
+</div>
+{{ end }}
+
+{{ end }}
+
+{{ define "footer_js" }} {{ end }}
