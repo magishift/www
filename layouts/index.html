@@ -27,10 +27,10 @@
   </div>
 </div>
 
-<div class="container pt-5 pb-4 pt-md-7 pb-md-4">
+<div class="container pt-5 pb-2 pt-md-7 pb-md-4">
   <div class="row justify-content-center">
     <div class="col-12">
-      <h2 class="title-3 text-dark mb-4">Framework Features</h2>
+      <h2 class="title-3 text-dark mb-4">Why Magishift?</h2>
     </div>
     {{ range.Site.Data.features }}
     <div class="col-12 col-md-6 col-lg-4 mb-2">
@@ -50,10 +50,17 @@
 
 {{ $enterprise := where (where .Site.RegularPages "Type" "enterprise") ".Params.featured" true }}
 {{if gt (len $enterprise) 0}}
-<div class="container pt-4 pt-md-2">
+<div class="container pt-2 pt-md-2">
   <div class="row justify-content-start">
-    <div class="col-12">
-      <h2 class="title-3 text-dark mb-3">For enterprises</h2>
+    <div class="col-12 mb-3">
+      <h3 class="title-4 text-dark">
+        Open source platform designed with enterprise standard in mind!
+      </h3>
+      <span class="text-dark mb-3">
+        Magishift is a complete solutions kit for building reactive server-side
+        apps. Contact us to find out more about expertise consulting, support,
+        and trainings.
+      </span>
     </div>
     {{ $enterprise := where (where .Site.RegularPages "Type" "enterprise") ".Params.featured" true }}
     {{ range first 6 (sort $enterprise ".Params.weight") }}

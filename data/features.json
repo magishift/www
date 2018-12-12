@@ -1,17 +1,17 @@
 [
   {
-    "title": "MVP in less then a month",
-    "description": "All members of our team are certified accountants.",
+    "title": "Low-Code Solutions",
+    "description": "Helps you to build application easier, faster and a more efficient use of time. And it doesn’t matter whether you have software engineer background or not.",
     "image": "/features/noun_The Process_1885341.svg"
   },
   {
-    "title": "Real-time Notification and Messaging",
-    "description": "New clients recieve an obligation free consultation.",
+    "title": "Versatile",
+    "description": "At the core, Magishift is a high-performance, reactive system, experience consistent, scalable performance, and built have in real-time data stream",
     "image": "/features/noun_branding_1885335.svg"
   },
   {
-    "title": "Elastic and Interchangeable",
-    "description": "We stay up to date on the latest changes to the tax code.",
+    "title": "Elastic and Progressive",
+    "description": "Takes advantage of latest cloud solutions, bringing latest standard architecture and microservice to your hand.",
     "image": "/features/noun_3d modeling_1885342.svg"
   }
 ]
